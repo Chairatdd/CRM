@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+api/node_modules/
+
+# Build output
+frontend/dist/
+frontend/.vite/
+
+# Environment files (contains DB credentials)
+api/.env
+backend/appsettings.Development.json
+
+# .NET build artifacts
+backend/bin/
+backend/obj/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.user
+
+# Logs
+*.log
+npm-debug.log*
