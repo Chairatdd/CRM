@@ -1,0 +1,60 @@
+USE crm_db;
+
+-- อัพเดท order dates ให้กระจายใน 6 เดือนล่าสุด (ธ.ค. 2025 - พ.ค. 2026)
+UPDATE orders SET order_date = '2025-12-05 09:30:00' WHERE id = 1;
+UPDATE orders SET order_date = '2025-12-10 10:15:00' WHERE id = 2;
+UPDATE orders SET order_date = '2025-12-18 11:00:00' WHERE id = 3;
+UPDATE orders SET order_date = '2025-12-22 14:30:00' WHERE id = 4;
+UPDATE orders SET order_date = '2025-12-28 09:00:00' WHERE id = 5;
+UPDATE orders SET order_date = '2026-01-05 10:30:00' WHERE id = 6;
+UPDATE orders SET order_date = '2026-01-10 11:30:00' WHERE id = 7;
+UPDATE orders SET order_date = '2026-01-15 13:00:00' WHERE id = 8;
+UPDATE orders SET order_date = '2026-01-20 10:00:00' WHERE id = 9;
+UPDATE orders SET order_date = '2026-01-25 09:30:00' WHERE id = 10;
+UPDATE orders SET order_date = '2026-02-03 11:00:00' WHERE id = 11;
+UPDATE orders SET order_date = '2026-02-08 14:00:00' WHERE id = 12;
+UPDATE orders SET order_date = '2026-02-14 10:30:00' WHERE id = 13;
+UPDATE orders SET order_date = '2026-02-18 09:00:00' WHERE id = 14;
+UPDATE orders SET order_date = '2026-02-24 11:30:00' WHERE id = 15;
+UPDATE orders SET order_date = '2026-03-02 13:30:00' WHERE id = 16;
+UPDATE orders SET order_date = '2026-03-07 10:00:00' WHERE id = 17;
+UPDATE orders SET order_date = '2026-03-12 09:30:00' WHERE id = 18;
+UPDATE orders SET order_date = '2026-03-17 11:00:00' WHERE id = 19;
+UPDATE orders SET order_date = '2026-03-22 14:00:00' WHERE id = 20;
+UPDATE orders SET order_date = '2026-03-28 10:30:00' WHERE id = 21;
+UPDATE orders SET order_date = '2026-04-03 09:00:00' WHERE id = 22;
+UPDATE orders SET order_date = '2026-04-08 11:30:00' WHERE id = 23;
+UPDATE orders SET order_date = '2026-04-14 13:00:00' WHERE id = 24;
+UPDATE orders SET order_date = '2026-04-19 10:00:00' WHERE id = 25;
+UPDATE orders SET order_date = '2026-04-24 09:30:00' WHERE id = 26;
+UPDATE orders SET order_date = '2026-04-29 11:00:00' WHERE id = 27;
+UPDATE orders SET order_date = '2026-05-05 09:30:00' WHERE id = 28;
+UPDATE orders SET order_date = '2026-05-10 10:00:00' WHERE id = 29;
+UPDATE orders SET order_date = '2026-05-15 11:30:00' WHERE id = 30;
+UPDATE orders SET order_date = '2026-05-18 13:00:00' WHERE id = 31;
+UPDATE orders SET order_date = '2026-05-19 10:00:00' WHERE id = 32;
+UPDATE orders SET order_date = '2026-05-20 09:30:00' WHERE id = 33;
+
+-- อัพเดท interaction dates ให้เป็นปัจจุบันด้วย
+UPDATE interactions SET interaction_date = '2026-05-20 10:00:00' WHERE id = 1;
+UPDATE interactions SET interaction_date = '2026-05-19 09:30:00' WHERE id = 2;
+UPDATE interactions SET interaction_date = '2026-05-18 14:00:00' WHERE id = 3;
+UPDATE interactions SET interaction_date = '2026-05-17 11:00:00' WHERE id = 4;
+UPDATE interactions SET interaction_date = '2026-05-16 10:30:00' WHERE id = 5;
+UPDATE interactions SET interaction_date = '2026-05-15 15:00:00' WHERE id = 6;
+UPDATE interactions SET interaction_date = '2026-05-14 13:30:00' WHERE id = 7;
+UPDATE interactions SET interaction_date = '2026-05-12 10:00:00' WHERE id = 8;
+UPDATE interactions SET interaction_date = '2026-05-10 09:00:00' WHERE id = 9;
+UPDATE interactions SET interaction_date = '2026-05-08 11:00:00' WHERE id = 10;
+UPDATE interactions SET interaction_date = '2026-05-06 16:00:00' WHERE id = 11;
+UPDATE interactions SET interaction_date = '2026-05-04 10:00:00' WHERE id = 12;
+UPDATE interactions SET interaction_date = '2026-05-02 14:30:00' WHERE id = 13;
+UPDATE interactions SET interaction_date = '2026-04-28 11:00:00' WHERE id = 14;
+UPDATE interactions SET interaction_date = '2026-04-24 09:00:00' WHERE id = 15;
+UPDATE interactions SET interaction_date = '2026-04-20 13:00:00' WHERE id = 16;
+UPDATE interactions SET interaction_date = '2026-04-15 10:30:00' WHERE id = 17;
+UPDATE interactions SET interaction_date = '2026-04-10 09:00:00' WHERE id = 18;
+UPDATE interactions SET interaction_date = '2026-04-05 14:00:00' WHERE id = 19;
+UPDATE interactions SET interaction_date = '2026-03-30 11:00:00' WHERE id = 20;
+
+SELECT 'Dates updated successfully!' AS status;
