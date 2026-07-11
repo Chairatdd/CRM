@@ -12,9 +12,11 @@ router.get('/', async (req, res) => {
     const params = [];
 
     if (search) {
-      where.push(`(c.first_name LIKE ? OR c.last_name LIKE ? OR c.email LIKE ? OR c.customer_code LIKE ?)`);
+      where.push(`(c.first_name LIKE ? OR c.last_name LIKE ? OR c.email LIKE ? OR c.customer_code LIKE ? OR REPLACE(REPLACE(c.phone, '-', ''), ' ', '') LIKE ?)`);
       const s = `%${search}%`;
-      params.push(s, s, s, s);
+      const digits = search.replace(/\D/g, '');
+      const sPhone = digits ? `%${digits}%` : ' no-match ';
+      params.push(s, s, s, s, sPhone);
     }
     if (status)  { where.push('c.status = ?');        params.push(status); }
     if (type)    { where.push('c.customer_type = ?'); params.push(type); }
